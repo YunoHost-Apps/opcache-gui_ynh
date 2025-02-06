@@ -41,6 +41,13 @@ ram.runtime = "50M"
     type = "group"
     default = "visitors"
 
+    [install.phpversion]
+    ask.en = "Choose a PHP version you want to use for OPcache"
+    ask.fr = "Choisissez une version PHP que vous souhaitez utiliser avec OPcache"
+    type = "select"
+    choices = ["7.4", "8.0", "8.1", "8.2", "8.3", "8.4"]
+    default = "8.3"
+
 [resources]
 
     [resources.sources]
@@ -60,4 +67,6 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "php8.3-fpm"
+        packages_from_raw_bash = """
+        echo "php${phpversion}-fpm"
+    """
