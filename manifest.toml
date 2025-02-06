@@ -67,4 +67,6 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "php${phpversion}-fpm"
+        packages_from_raw_bash = """
+        echo "php${phpversion}-fpm"
+    """
