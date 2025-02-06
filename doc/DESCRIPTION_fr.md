@@ -1,0 +1,1 @@
+Une interface propre et réactive pour les informations de Zend OPcache, montrant les statistiques, les paramètres et les fichiers mis en cache, et fournissant une mise à jour en temps réel des informations.
