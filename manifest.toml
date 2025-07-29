@@ -41,12 +41,12 @@ ram.runtime = "50M"
     type = "group"
     default = "visitors"
 
-    [install.phpversion]
+    [install.php_version]
     ask.en = "Choose a PHP version you want to use for OPcache"
     ask.fr = "Choisissez une version PHP que vous souhaitez utiliser avec OPcache"
     type = "select"
-    choices = ["7.4", "8.0", "8.1", "8.2", "8.3", "8.4"]
-    default = "8.3"
+    choices = ["8.2", "8.3", "8.4"]
+    default = "8.4"
 
 [resources]
 
@@ -68,5 +68,5 @@ ram.runtime = "50M"
 
     [resources.apt]
         packages_from_raw_bash = """
-        echo "php${phpversion}-fpm"
+        echo "php${php_version}-fpm"
     """
