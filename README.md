@@ -10,7 +10,7 @@ It shall NOT be edited by hand.
 
 Effective and responsive interface for Zend OPcache
 
-[![Version: 3.6.0~ynh1](https://img.shields.io/badge/Version-3.6.0~ynh1-rgba(0,150,0,1)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/opcache-gui/)
+[![Version: 3.6.1~ynh1](https://img.shields.io/badge/Version-3.6.1~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/opcache-gui/)
 
 <div align="center">
 <a href="https://apps.yunohost.org/app/opcache-gui"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
