@@ -8,6 +8,9 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Ensuring downward compatibility..."
 
+# If php_version doesn't exist, create it. We assume it is the default system one.
+ynh_app_setting_set_default --key=php_version --value=$YNH_DEFAULT_PHP_VERSION
+
 ynh_app_setting_set_default --key=php_upload_max_filesize --value=50M
 ynh_app_setting_set_default --key=php_post_max_size --value=50M
 
@@ -17,13 +20,6 @@ ynh_app_setting_set_default --key=php_post_max_size --value=50M
 ynh_script_progression "Upgrading source files..."
 
 ynh_setup_source --dest_dir="$install_dir" --full_replace
-
-#=================================================
-# UPDATE A CONFIG FILE
-#=================================================
-#ynh_script_progression "Updating $app's configuration files..."
-
-#ynh_config_add --template="some_config_file" --destination="$install_dir/some_config_file"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
